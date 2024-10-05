@@ -14,6 +14,9 @@ const UserDetail = ({ users }) => {
     <div className="user-detail">
       <h1>User Details</h1>
       <p>
+        <strong>Name:</strong> {user.name}
+      </p>
+      <p>
         <strong>Username:</strong> {user.username}
       </p>
       <p>

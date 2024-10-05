@@ -8,7 +8,7 @@ const App = () => {
   const users = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Leanne Graham",
       username: "johnny",
       email: "john@example.com",
       phone: "555-555-5555",
