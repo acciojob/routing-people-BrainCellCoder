@@ -9,7 +9,7 @@ const App = () => {
     {
       id: 1,
       name: "Leanne Graham",
-      username: "johnny",
+      username: "Bret",
       email: "john@example.com",
       phone: "555-555-5555",
       website: "johndoe.com",
