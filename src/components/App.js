@@ -1,13 +1,56 @@
-
 import React from "react";
-import './../styles/App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import UserList from "./UserList";
+import UserDetail from "./UserDetail";
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  // Updated user data with additional fields
+  const users = [
+    {
+      id: 1,
+      name: "John Doe",
+      username: "johnny",
+      email: "john@example.com",
+      phone: "555-555-5555",
+      website: "johndoe.com",
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      username: "jane_smith",
+      email: "jane@example.com",
+      phone: "555-555-1234",
+      website: "janesmith.com",
+    },
+    {
+      id: 3,
+      name: "Alice Johnson",
+      username: "alice_j",
+      email: "alice@example.com",
+      phone: "555-555-7890",
+      website: "alicejohnson.com",
+    },
+  ];
 
-export default App
+  return (
+    <Router>
+      <div className="app">
+        <h1>User Directory</h1>
+        {/* Navigation Links */}
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
+
+        <Routes>
+          {/* Route for the list of users */}
+          <Route path="/" element={<UserList users={users} />} />
+
+          {/* Dynamic route for user details */}
+          <Route path="/users/:id" element={<UserDetail users={users} />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
