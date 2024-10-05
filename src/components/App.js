@@ -35,12 +35,6 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <h1>User Directory</h1>
-        {/* Navigation Links */}
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-
         <Routes>
           {/* Route for the list of users */}
           <Route path="/" element={<UserList users={users} />} />

@@ -12,7 +12,7 @@ const UserDetail = ({ users }) => {
 
   return (
     <div className="user-detail">
-      <h2>{user.name}'s Details</h2>
+      <h1>User Details</h1>
       <p>
         <strong>Username:</strong> {user.username}
       </p>
